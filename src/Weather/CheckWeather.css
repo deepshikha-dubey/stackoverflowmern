@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+  
+    margin: 0;
+    padding: 0;
+  }
+  .p{
+    font-size: 1.6rem;
+  }
+  .h1{
+    font-size: 6rem;
+  }
+  .image{
+    height: 100px;
+    width: 100px;
+    
+  }
+  .appweather{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    
+    color: #fff; 
+    margin-top:80px;
+  }
+  .appweather::before{
+    content: '';
+    background: url('../assets/bg1.jpg'); 
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  .appweather .search{
+    text-align: center;
+    padding: 1rem;
+  }
+  .appweather .input{
+    padding: .7rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  ::placeholder{
+    color: #fff;
+  }
+  .container{
+    max-width: 700px;
+    height: 600px;
+    margin: auto ;
+    padding: 0 1rem;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .aappweather .top{
+    width: 100%;
+    margin: 1rem auto;
+  }
+  /* .app .description{
+    position: relative;
+    right: -90%;
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+  } */
+  .appweather .bottom{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Media Query for Tablets (e.g., iPad) */
+  @media screen and (max-width: 768px) {
+    .appweather .bottom {
+        grid-template-columns: repeat(2, 1fr);
+        
+
+    }
+    .p{
+      font-size: 1.2rem;
+    }
+    .h1{
+      font-size: 3.5rem;
+    }
+    .image{
+      height: 90px;
+      width: 90px;
+      
+    }
+    .appweather .input{
+      padding: .5rem 1.5rem;
+      font-size: 0.9rem;
+      border-radius: 25px;
+     
+    }
+
+  }
+  
+  /* Media Query for Mobile Phones */
+  @media screen and (max-width: 480px) {
+    .appweather .bottom {
+        grid-template-columns:repeat(2, 1fr);
+    }
+    .p{
+      font-size: 1.0rem;
+    }
+    .h1{
+      font-size: 3rem;
+    }
+    .image{
+      height: 70px;
+      width: 70px;
+      
+    }
+    .appweather .input{
+      padding: .4rem 1.1rem;
+      font-size: 0.8rem;
+      border-radius: 25px;
+     
+    }
+    
+  }
